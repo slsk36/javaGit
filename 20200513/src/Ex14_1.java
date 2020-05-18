@@ -1,4 +1,4 @@
-/*
+/* [14장 클래스의 상속]
  * 다음 클래스 각각에 적절한 생성자를 삽입해보자.
  * 상속관계를 고려하여 각 클래스별로 필요한 생성자를 삽입해야 한다.
  * Car는 가솔린으로 동작하는 자동차
@@ -17,7 +17,7 @@ class HybridCar extends Carr{ //하이브리드 자동차
 	int electricGauge; //전기 배터리 잔여량
 	
 	public HybridCar(int a, int b) {
-		super(b);
+		super(a);
 		electricGauge = b;
 	}
 }

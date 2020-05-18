@@ -1,5 +1,5 @@
 /*
- *  문제1 선생님 풀이
+ *  문제13-2-2 선생님 문제 풀이
  */
 class ArrayCalu{
 	public static void addOneArr(int[] arr, int add) {
