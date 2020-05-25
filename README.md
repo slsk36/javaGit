@@ -15,6 +15,6 @@ java Git 실습
 >>※ 오류발생시 git pull 명령어로 원격저장소와 로컬저장소 상태 
 
 # git clone사용
-1.git clone https://github.com/slsk36/javaGit.git  //내 컴퓨터에 깃 원격저장소 가져오기
-2.에러 발생시 cd 명령어로 git 파일이 있는 저장소로 들어가기 
-3.git status 와  git remote -v로 현재 상태확인후 절차대로 
+1. git clone https://github.com/slsk36/javaGit.git  //내 컴퓨터에 깃 원격저장소 가져오기
+2. 에러 발생시 cd 명령어로 git 파일이 있는 저장소로 들어가기 
+3. git status 와  git remote -v로 현재 상태확인후 절차대로 
