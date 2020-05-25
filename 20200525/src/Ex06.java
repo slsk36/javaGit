@@ -1,3 +1,7 @@
+/*
+ * SQL과 자바 연결하여 데이터 추가,삽입,삭제 하기
+ */
+
 import java.sql.Connection;			//연결유지 객체
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;	//sql을 담는 객
