@@ -1,20 +1,20 @@
 /*
- * SQL°ú ÀÚ¹Ù ¿¬°áÇÏ¿© µ¥ÀÌÅÍ Ãß°¡,»ğÀÔ,»èÁ¦ ÇÏ±â
+ * SQLê³¼ ìë°” ì—°ê²°í•˜ì—¬ ë°ì´í„° ì¶”ê°€,ì‚½ì…,ì‚­ì œ í•˜ê¸°
  */
 
-import java.sql.Connection;			//¿¬°áÀ¯Áö °´Ã¼
+import java.sql.Connection;			//ì—°ê²°ìœ ì§€ ê°ì²´
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;	//sqlÀ» ´ã´Â °´
-//import java.sql.ResultSet;			//table ³»¿ë ´ã´Â °´Ã¼
+import java.sql.PreparedStatement;	//sqlì„ ë‹´ëŠ” ê°ì²´
+//import java.sql.ResultSet;			//table ë‚´ìš© ë‹´ëŠ” ê°ì²´
 import java.util.Scanner;
 
 
 public class Ex06 {
 	Ex06(){
 		Scanner scan = new Scanner(System.in);
-		System.out.println("aÀÇ °ª ");
+		System.out.println("aï¿½ï¿½ ï¿½ï¿½ ");
 		String a = scan.nextLine();
-		System.out.println("bÀÇ °ª ");
+		System.out.println("bï¿½ï¿½ ï¿½ï¿½ ");
 		String b = scan.nextLine();
 		
 		Connection conn = null;
@@ -22,7 +22,7 @@ public class Ex06 {
 //		ResultSet rs = null;
 		
 		try {
-			//¿¹¿Ü°¡ ³ª¿À´ÂÁö °üÂûÇÏ´Â ¿µ¿ª
+			//ì˜ˆì™¸ê°€ ë‚˜ì˜¤ëŠ”ì§€ ê´€ì°°í•˜ëŠ” ì˜ì—­
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","HR","1234");
@@ -31,8 +31,8 @@ public class Ex06 {
 					"(aa,bb) "+
 					"VALUES \r \n"+
 					"('"+a+"','"+b+"')");
-			//insert, update, delete ´Â excuteUpdate·Î ½ÇÇà
-			//select executeQuery ·Î ½ÇÇà
+			//insert, update, delete ëŠ” excuteUpdateë¡œ ì‹¤í–‰
+			//select executeQuery ë¡œ ì‹¤í–‰
 			
 			pstmt.executeUpdate();
 //			rs= pstmt.executeQuery();
@@ -50,14 +50,14 @@ public class Ex06 {
 //				System.out.println("rs.get(2)= " +rs.getString(2));
 //			}
 			
-			System.out.println("Á¤»óÀûÀ¸·Î DB¿¬°á ¼º°ø");
+			System.out.println("ì •ìƒì ìœ¼ë¡œ DBì—°ê²° ì„±ê³µ");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-			//¿¹¿Ü ¹ß»ı ÇßÀ»¶§ Ã³¸®ÇÏ´Â ¿µ¿ª
+			//ì˜ˆì™¸ ë°œìƒ í–ˆì„ë•Œ ì²˜ë¦¬í•˜ëŠ” ì˜ì—­
 		}
 		finally {
-			//¿¹¿Ü°¡ ¹ß»ıÇÏµç ÇÔ¼ö°¡ Á¾·áµÇµç ¹«Á¶°Ç ½ÇÇàÇÏ´Â ¿µ¿ª
+			//ì˜ˆì™¸ê°€ ë°œìƒí•˜ë“  í•¨ìˆ˜ê°€ ì¢…ë£Œë˜ë“  ë¬´ì¡°ê±´ ì‹¤í–‰í•˜ëŠ” ì˜ì—­
 			try {
 				if(conn != null)
 					conn.close();

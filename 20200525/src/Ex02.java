@@ -4,7 +4,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
-//ctrl + shift + o => ÀÚµ¿ ÀÓÆ÷Æ®
+//ctrl + shift + o => ìë™ ì„í¬íŠ¸
 import java.nio.file.Paths;
 
 public class Ex02 {
@@ -19,18 +19,18 @@ public class Ex02 {
 //				
 //				@Override
 //				public void write(int b) throws IOException {
-//					// ¿¾³¯ ¹öÀü
+//					// ì˜›ë‚  ë²„ì „
 //				}
 //			}));
 			bw = Files.newBufferedWriter(filePath);
 			bw.write("aaa");
 			bw.write("bbb");
-			//a.txt ÆÄÀÏÀÇ ³»¿ëÀÌ ¹Ù²ï´Ù.
+			//a.txt íŒŒì¼ì˜ ë‚´ìš©ì´ ë°”ë€ë‹¤.
 			bw.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 	}
 }

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-//ÀúÀå ¹è¿­ÀÇ ºñ±³ equals¸Ş¼Òµå
+//ì €ì¥ ë°°ì—´ì˜ ë¹„êµ equalsë©”ì†Œë“œ
 class A{
 	
 }
@@ -31,14 +31,14 @@ public class Ex09 {
 		A a1 = new A();
 		A a2 = new A();
 		
-		System.out.println(a1); //ÁÖ¼Ò°ª(ÂüÁ¶°ª)
+		System.out.println(a1); //ì£¼ì†Œê°’(ì°¸ì¡°ê°’)
 		System.out.println(a2);
-		System.out.println(a1.equals(a2)); //a1 == a2 ¿Í °°Àº ¶æ
+		System.out.println(a1.equals(a2)); //a1 == a2 ì™€ ê°™ì€ ëœ»
 		
 		INum[] ar1 = new INum[3];
 		INum[] ar2 = new INum[3];
 		
-		ar1[0]=new INum(1); ar2[0]=new INum(1); //ÁÖ¼Ò°ªÀ» ¼­·Î ºñ±³
+		ar1[0]=new INum(1); ar2[0]=new INum(1); //ì£¼ì†Œê°’ì„ ì„œë¡œ ë¹„êµ
 		ar1[1]=new INum(2); ar2[1]=new INum(2);
 		ar1[2]=new INum(3); ar2[2]=new INum(3);
 		

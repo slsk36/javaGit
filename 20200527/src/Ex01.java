@@ -28,7 +28,7 @@ public class Ex01 {
 //래퍼 클래스 Wrapper
 	Ex01(){
 		Integer iInst = new Integer(3);
-		System.out.println(iInst.toString());; //tostring 호출
+		System.out.println(iInst.toString());  //tostring 호출
 		System.out.println(iInst);			   //tostring 호출
 		
 		Integer iInst1 = new Integer("33");

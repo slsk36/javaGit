@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class MyException extends Exception{
 	public MyException() {
-		super("°í±â¾ßÃ¤»ı¼±");
+		super("ê³ ê¸°ì•¼ì±„ìƒì„ ");
 	}
 }
 
@@ -12,17 +12,17 @@ public class Ex04 {
 		
 		try {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Á¡½É ¹¹¸ÔÁö");
+		System.out.println("ì ì‹¬ ë­ë¨¹ì§€");
 		String menu = scan.nextLine();
-		if(menu.contains("°í±â")) {
-			System.out.println("Á¤»ó");
+		if(menu.contains("ê³ ê¸°")) {
+			System.out.println("ì •ìƒ");
 		}
 		else {
 			throw new MyException();
 		}
 		}
 		catch(MyException e){
-			System.out.println("°í±â¸¸ °¡´É");
+			System.out.println("ê³ ê¸°ë§Œ ê°€ëŠ¥");
 		}
 		
 	}

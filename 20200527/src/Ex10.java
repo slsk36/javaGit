@@ -4,7 +4,7 @@ class B{
 	public B(int num) {
 		super();
 		this.num = num;
-	} //»ı¼ºÀÚ ct+sh+s+o
+	} //ìƒì„±ì ct+sh+s+o
 
 	@Override
 	public boolean equals(Object obj) {
@@ -14,12 +14,12 @@ class B{
 		else {
 			return false;
 		}
-	} //¿À¹ö¶óÀÌµå ct+sh+s+v
+	} //ì˜¤ë²„ë¼ì´ë“œ ct+sh+s+v
 	
 	
 	
 //	public boolean myEquals(Object b) {
-////		B mb = (B)b; //´ÙÇü¼º ±â¹ı, ÀÚ½ÄÀº ºÎ¸ğ¿¡°Ô Á¤ÀÇÇÒ ¼ö ÀÖ´Ù
+////		B mb = (B)b; //ë‹¤í˜•ì„± ê¸°ë²•, ìì‹ì€ ë¶€ëª¨ì—ê²Œ ì •ì˜í•  ìˆ˜ ìˆë‹¤
 //		
 //		if(this.num == ((B)b).num) {
 //			return true;
@@ -37,7 +37,7 @@ public class Ex10 {
 		
 		
 		
-		System.out.println(b1.equals(b2)); 		//false ¿À¹ö¶óÀÌµå ¾²¸é true°¡ µÊ
+		System.out.println(b1.equals(b2)); 		//false ì˜¤ë²„ë¼ì´ë“œ ì“°ë©´ trueê°€ ë¨
 //		System.out.println(b1.myEquals(b2));	//true
 //		System.out.println(b1.myEquals(b3));	//false
 	}

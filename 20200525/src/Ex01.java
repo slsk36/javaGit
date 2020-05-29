@@ -6,7 +6,7 @@ public class Ex01 {
 
 	public static void main(String[] args) {
 		
-		Scanner scan = null; //¾øÀ¸¸é scan.close¿¡ ¿¡·¯¹ß»ı
+		Scanner scan = null; //ì—†ìœ¼ë©´ scan.closeì— ì—ëŸ¬ë°œìƒ
 		int sum=0;
 		try {
 			scan = new Scanner(new File("d:\\a.txt"));
@@ -23,26 +23,26 @@ public class Ex01 {
 				try {
 					int intvalue = Integer.parseInt(temp);
 					System.out.println("temp= "+temp);
-					System.out.println("¼ıÀÚ Çüº¯È¯ ¼º°ø");
+					System.out.println("ìˆ«ì í˜•ë³€í™˜ ì„±ê³µ");
 					sum += intvalue;
 				}
 				catch (Exception e) {
 					System.out.println("temp= "+temp);
-					System.out.println("¹®ÀÚ Çüº¯È¯ ½ÇÆĞ");
+					System.out.println("ë¬¸ì í˜•ë³€í™˜ ì‹¤íŒ¨");
 				}
 			}
 			
 		}
-		catch(FileNotFoundException e){ //FileNotFound¿¹¿Ü¸¦ Ã³¸®
+		catch(FileNotFoundException e){ //FileNotFoundì˜ˆì™¸ë¥¼ ì²˜ë¦¬
 			e.printStackTrace();
 		}
-		catch(Exception e) { //¸ğµç ¿¹¿Ü¸¦ Ã³¸®
-			e.printStackTrace(); //¿¡·¯ ÃßÀû
+		catch(Exception e) { //ëª¨ë“  ì˜ˆì™¸ë¥¼ ì²˜ë¦¬
+			e.printStackTrace(); //ì—ëŸ¬ ì¶”ì 
 		}
 		
 		System.out.println("sum= " +sum);
 		
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 		scan.close();
 	}
 }

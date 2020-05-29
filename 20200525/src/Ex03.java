@@ -1,9 +1,8 @@
-
 public class Ex03 {
 	
 	public static void main(String[] args) {
 		doA();
-		System.out.println("Á¤»óÁ¾·á");
+		System.out.println("ì •ìƒì¢…ë£Œ");
 		
 	}
 	
@@ -18,7 +17,7 @@ public class Ex03 {
 		int a = 10;
 		int b = 0;
 		System.out.println(a/b);
-		//¼Ò½º»ó¿¡ ¿¹¿Ü »¡°£ÁÙÀÌ ³ª¿À±â ¶§¹®¿¡ ¿¹¿Ü ¹«Á¶°Ç Àâ¾ÆÁÖ±â
-		throw new Exception("¸¸µç ¿¹¿Ü");
+		//ì†ŒìŠ¤ìƒì— ì˜ˆì™¸ ë¹¨ê°„ì¤„ì´ ë‚˜ì˜¤ê¸° ë•Œë¬¸ì— ì˜ˆì™¸ ë¬´ì¡°ê±´ ì¡ì•„ì£¼ê¸°
+		throw new Exception("ë§Œë“  ì˜ˆì™¸");
 	}
 }

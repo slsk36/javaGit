@@ -1,7 +1,7 @@
 import java.util.Arrays;
 /*
- * ¹®Á¦20-2. ÀÌ¸§ÀÇ ±æÀÌ ¼øÀ¸·Î Á¤·ÄÀÌ µÇµµ·Ï ¼öÁ¤ÇØº¸ÀÚ.
- * 		       ÀÌ¸§ÀÇ ±æÀÌ°¡ ÂªÀº ÀÎ½ºÅÏ½º ÀÏ¼ö·Ï ¹è¿­ÀÇ ¾ÕÂÊ¿¡ À§Ä¡ÇÏµµ·Ï ¼öÁ¤
+ * ë¬¸ì œ20-2. ì´ë¦„ì˜ ê¸¸ì´ ìˆœìœ¼ë¡œ ì •ë ¬ì´ ë˜ë„ë¡ ìˆ˜ì •í•´ë³´ì.
+ * 		       ì´ë¦„ì˜ ê¸¸ì´ê°€ ì§§ì€ ì¸ìŠ¤í„´ìŠ¤ ì¼ìˆ˜ë¡ ë°°ì—´ì˜ ì•ìª½ì— ìœ„ì¹˜í•˜ë„ë¡ ìˆ˜ì •
  */
 
 class Person2 implements Comparable{
@@ -16,8 +16,8 @@ class Person2 implements Comparable{
 	@Override
 	public int compareTo(Object o) {
 		Person2 p = (Person2)o;
-		return this.name.length() - p.name.length(); // ¿À¸§Â÷¼øÁ¤·Ä
-//		return p.name.length() - this.name.length(); // ³»¸²Â÷¼øÁ¤·Ä
+		return this.name.length() - p.name.length(); // ì˜¤ë¦„ì°¨ìˆœì •ë ¬
+//		return p.name.length() - this.name.length(); // ë‚´ë¦¼ì°¨ìˆœì •ë ¬
 	}
 
 //	@Override
@@ -44,7 +44,7 @@ public class Ex20_2_2 {
 		Arrays.sort(ar);
 		
 		for (int i = 0; i < ar.length; i++) {
-			System.out.print(ar[i].age+"¼¼ ");
+			System.out.print(ar[i].age+"ì„¸ ");
 			System.out.print(ar[i].name);
 			System.out.println();
 		}

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 /*
- * ¹®Á¦20-1. ³ªÀÌÀÇ ¿ª¼øÀ¸·Î Á¤·ÄÀÌ µÇµµ·Ï ÇØº¸ÀÚ.
- * 			´Ù½Ã ¸»ÇØ¼­ ¸¹Àº ³ªÀÌÀÇ ÀÎ½ºÅÏ½ºÀÏ¼ö·Ï ¹è¿­ÀÇ ¾ÕÂÊ¿¡ À§Ä¡ÇÏµµ·Ï ¼öÁ¤ÇØº¸ÀÚ
+ * ë¬¸ì œ20-1. ë‚˜ì´ì˜ ì—­ìˆœìœ¼ë¡œ ì •ë ¬ì´ ë˜ë„ë¡ í•´ë³´ìž.
+ * 			ë‹¤ì‹œ ë§í•´ì„œ ë§Žì€ ë‚˜ì´ì˜ ì¸ìŠ¤í„´ìŠ¤ì¼ìˆ˜ë¡ ë°°ì—´ì˜ ì•žìª½ì— ìœ„ì¹˜í•˜ë„ë¡ ìˆ˜ì •í•´ë³´ìž
  */
 
 class Persons implements Comparable{
@@ -36,7 +36,7 @@ public class Ex20_2_1 {
 		Arrays.sort(ar);
 		
 		for (int i = 0; i < ar.length; i++) {
-			System.out.print(ar[i].age+"¼¼ ");
+			System.out.print(ar[i].age+"ì„¸ ");
 			System.out.print(ar[i].name);
 			System.out.println();
 		}

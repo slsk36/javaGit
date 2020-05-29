@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-//Person °´Ã¼ comparable
+//Person ê°ì²´ comparable
 class Person implements Comparable{
 	int age;
 	String name;
@@ -14,25 +14,25 @@ class Person implements Comparable{
 		Person p = (Person)o;
 		return this.age - p.age;
 //		if(this.age > p.age) {
-//			return 1; //³»ÀÚ½ÅÀÌ Å©¸é Å« ¼ö¸¦ ¹İÈ¯
+//			return 1; //ë‚´ìì‹ ì´ í¬ë©´ í° ìˆ˜ë¥¼ ë°˜í™˜
 //		}
 //		else if(this.age < p.age) {
-//			return -1; //ÀÛÀ¸¸é À½¼ö¸¦ ¹İÈ¯
+//			return -1; //ì‘ìœ¼ë©´ ìŒìˆ˜ë¥¼ ë°˜í™˜
 //		}
 //		else {
-//		return 0; //°°À¸¸é 0¹İÈ¯
+//		return 0; //ê°™ìœ¼ë©´ 0ë°˜í™˜
 //		}
-	} 								//³ªÀÌ ¿À¸§Â÷¼ø Á¤·Ä
+	} 								//ë‚˜ì´ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 }
 
 public class Ex11 {
 	Ex11(){
 		Person[] ar = new Person[3];
-		ar[0] = new Person(20, "È«±æµ¿");
-		ar[1] = new Person(10, "ÀÌ±æµ¿");
-		ar[2] = new Person(30, "±è±æµ¿");
+		ar[0] = new Person(20, "í™ê¸¸ë™");
+		ar[1] = new Person(10, "ì´ê¸¸ë™");
+		ar[2] = new Person(30, "ê¹€ê¸¸ë™");
 		
-		Arrays.sort(ar);  //³ªÀÌ¼ø ¿À¸§Â÷¼ø Á¤·Ä
+		Arrays.sort(ar);  //ë‚˜ì´ìˆœ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 		
 		for (int i=0; i<ar.length; i++) {
 			System.out.println(ar[i].age);

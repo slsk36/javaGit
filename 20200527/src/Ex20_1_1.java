@@ -2,17 +2,17 @@ import java.util.Random;
 import java.util.Scanner;
 
 /*
- * ³­¼öÀÇ »ı¼º
- * ÇÁ·Î±×·¥ »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ Á¤¼ö A¿Í Z¸¦ ÀÔ·Â¹Ş´Â´Ù.
- * ±×¸®°í A¿Í Z¸¦ Æ÷ÇÔÇÏ¿© ±× »çÀÌ¿¡ ÀÖ´Â ³­¼ö 10°³¸¦ »ı¼ºÇÏ¿© Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º.
+ * ë‚œìˆ˜ì˜ ìƒì„±
+ * í”„ë¡œê·¸ë¨ ì‚¬ìš©ìë¡œë¶€í„° ì„ì˜ì˜ ì •ìˆ˜ Aì™€ Zë¥¼ ì…ë ¥ë°›ëŠ”ë‹¤.
+ * ê·¸ë¦¬ê³  Aì™€ Zë¥¼ í¬í•¨í•˜ì—¬ ê·¸ ì‚¬ì´ì— ìˆëŠ” ë‚œìˆ˜ 10ê°œë¥¼ ìƒì„±í•˜ì—¬ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±.
  */
 public class Ex20_1_1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Á¤¼ö A: ");
+		System.out.println("ì •ìˆ˜ A: ");
 		int A= scan.nextInt();
 		
-		System.out.println("Á¤¼ö Z: ");
+		System.out.println("ì •ìˆ˜ Z: ");
 		int Z= scan.nextInt();
 		
 		int min,max;

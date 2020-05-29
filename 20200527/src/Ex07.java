@@ -1,6 +1,6 @@
 import java.util.Arrays;
-//¹è¿­ÀÇ º¹»ç copyOf aÀÇ ¹è¿­À» 3°³¸¸ º¹»çÇÏ¶ó
-//aÀÇ ¹è¿­ÀÇ ¸ðµÎ º¹»çÇÏ¶ó.
+//ë°°ì—´ì˜ ë³µì‚¬ copyOf aì˜ ë°°ì—´ì„ 3ê°œë§Œ ë³µì‚¬í•˜ë¼
+//aì˜ ë°°ì—´ì˜ ëª¨ë‘ ë³µì‚¬í•˜ë¼.
 public class Ex07 {
 	Ex07(){
 		int a[] = {1,2,3,4,5};
