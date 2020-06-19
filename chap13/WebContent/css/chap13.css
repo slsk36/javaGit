@@ -3,6 +3,9 @@
 *{
 	font-family: 'Black Han Sans', sans-serif;
 }
+tr:hover{
+	cursor: pointer;
+}
 .bg-blue{
 	background-color: blue;	
 }

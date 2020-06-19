@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="chap13.board.BoardDBBean" %>
-<%@ page import="chap13.board.BoardDataBean" %>
+	pageEncoding="UTF-8"%>
+<%@ page import="chap13.board.BoardDBBean"%>
+<%@ page import="chap13.board.BoardDataBean"%>
 <%
 	//request.getParameter(주소줄에 있는 데이터 값을 가져오는 함수)
 	String sub = request.getParameter("subject");
