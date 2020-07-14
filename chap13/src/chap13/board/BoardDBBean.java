@@ -25,6 +25,23 @@ public class BoardDBBean {
 		return "연결";
 	}
 	
+	public void deleteOne(int num) {
+		Connection conn;
+		PreparedStatement pstmt;
+		
+		try {
+			Class.forName(sqlserverClass);
+			
+			conn = DriverManager.getConnection(sqlserverUrl, sqlserverUser, sqlserverPw);
+			pstmt = conn.prepareStatement("delete from board where num=?");
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+				e.printStackTrace();
+			}
+	}
+	
 	public void insertArticle(BoardDataBean dataBean) {
 		System.out.println(dataBean);
 		Connection conn = null;

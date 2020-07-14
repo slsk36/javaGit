@@ -65,7 +65,7 @@
 <
 <script>
 	$("#updateBtn").on("click",function(){ window.location="updateForm.jsp";});
-	$("#deleteBtn").on("click",function(){ window.location="deleteForm.jsp?num=<% out.print(one.getNum());%>"; });
+	$("#deleteBtn").on("click",function(){ window.location="deleteForm.jsp?num=<% out.print(one.getNum());%>";});
 	$("#indexBtn").on("click",function(){ window.location="index.jsp";});
 // 	$("#writeBtn").on("click", function() {$("#frm").submit();})
 </script>

@@ -2,26 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="chap13.board.BoardDBBean"%>
 <%
-		/*	
-		BoardDBBean bdb = new BoardDBBean();
-		out.println(bdb.toString()+"<br/>");
 		
-		BoardDBBean bdb1 = new BoardDBBean();
-		out.println(bdb1.toString()+"<br/>");
-		
-		BoardDBBean bdb2 = new BoardDBBean();
-		out.println(bdb2.toString()+"<br/>");
-		
-		out.println("<h1>싱글톤 getInstance()</h1>");
-		BoardDBBean gbdb1 = BoardDBBean.getInstance();
-		out.println(gbdb1.toString()+"<br/>");
-		
-		BoardDBBean gbdb2 = BoardDBBean.getInstance();
-		out.println(gbdb2.toString()+"<br/>");
-	
-		out.println(gbdb3.doA());
-		out.println(gbdb3.toString()+"<br/>");
-		*/
 	BoardDBBean bdb = BoardDBBean.getInstance();
 %>
 <!DOCTYPE html>
