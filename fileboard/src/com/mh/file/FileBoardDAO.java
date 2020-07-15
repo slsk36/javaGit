@@ -4,9 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileBoardDAO {
 	
+	private static FileBoardDAO dao = new FileBoardDAO();
+	
+	public static FileBoardDAO getInstance() {
+		return dao;
+	}
+//DB close함수	
 	public void doClose(ResultSet rs, PreparedStatement pstmt, Connection conn) {
 		try {
 			if(rs != null) rs.close();
@@ -16,7 +24,50 @@ public class FileBoardDAO {
 			
 		}
 	}
-
+//반복되는 내용은 함수처리하기 DB연결 함수
+	public Connection getConnection() {
+		Connection conn = null;
+		try {
+			Class.forName(CVALUES.sqlClass);
+			conn = DriverManager.getConnection(CVALUES.sqlUrl, CVALUES.sqlUser, CVALUES.sqlPass);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+	}
+	
+	
+	public List<FileBoardDTO> selectAllFileBoard(){
+		List<FileBoardDTO> list = new ArrayList<FileBoardDTO>();
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+				
+		try {
+			conn=getConnection();
+			pstmt = conn.prepareStatement("select * from fileboard");
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				FileBoardDTO fdto = new FileBoardDTO();
+				fdto.setContent(rs.getString("content"));
+				fdto.setTitle(rs.getString("title"));
+				fdto.setFilename(rs.getString("filename"));
+				fdto.setIdx(rs.getInt("idx"));
+								
+				list.add(fdto);
+			}
+		}
+		catch(Exception e) {}
+		finally {
+			doClose(rs, pstmt, conn);
+		}
+		return list;
+		
+	}
+	
 	public void insertFileBoard(FileBoardDTO dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -24,8 +75,7 @@ public class FileBoardDAO {
 		int idx=0;
 		
 		try {
-			Class.forName(CVALUES.sqlClass);
-			conn = DriverManager.getConnection(CVALUES.sqlUrl, CVALUES.sqlUser, CVALUES.sqlPass);
+			conn=getConnection();
 			
 			System.out.println("dto= " +dto.toString());
 			

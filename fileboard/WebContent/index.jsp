@@ -1,21 +1,58 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.mh.file.FileBoardDAO" %>
+<%@ page import="com.mh.file.FileBoardDTO" %>
+<%@ page import="java.util.List" %> 
+<%
+	//FileBoardDAO dao1 = new FileBoardDAO();
+	FileBoardDAO dao = FileBoardDAO.getInstance();
+	
+	List<FileBoardDTO> list = dao.selectAllFileBoard(); //fileboardì•ˆì—ìžˆëŠ” ëª¨ë“  í–‰ì˜ ë‚´ìš©ì„ ê°€ì ¸ì˜´
+%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <form action="uploadproc.jsp" method="post" enctype="multipart/form-data">
 	<h1>file upload</h1>
 	<div>
-		Á¦¸ñ<input type="text" name="title"/><br/>
-		³»¿ë<textarea name="content"></textarea><br/>
-		Ã·ºÎ<input type="file" name="file"/>
-		<!--Ã·ºÎµÈ ÆÄÀÏ°æ·Î==>> D:\2020java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\fileboard\upload -->
-		<input type="submit" value="ÀúÀå"/>
+		ì œëª©<input type="text" name="title"/><br/>
+		ë‚´ìš©<textarea name="content"></textarea><br/>
+		ì²¨ë¶€<input type="file" name="file"/>
+		<!--ì²¨ë¶€ëœ íŒŒì¼ê²½ë¡œ==>> D:\2020java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\fileboard\upload -->
+		<input type="submit" value="ì €ìž¥"/>
 	</div>
 </form>
+<div>
+	<table border="1">
+		<tr>
+			<th>idx</th>
+			<th>title</th>
+			<th>content</th>
+			<th>filename</th>
+		</tr>
+		<%
+			for(int i=0; i<list.size(); i++){
+				FileBoardDTO fdto = list.get(i);
+				out.println("<tr>");
+				out.println("<td>"+fdto.getIdx()+"</td>");
+				out.println("<td>"+fdto.getTitle()+"</td>");
+				out.println("<td>"+fdto.getContent()+"</td>");
+				out.println("<td><img width=\"150\" src=\"/fileboard/upload/"+fdto.getFilename()+"\"/></td>");
+				out.println("</tr>");
+			}
+		%>
+		
+		<tr>
+			<td>111</td>
+			<td>222</td>
+			<td>333</td>
+			<td><img width="150" src="/fileboard/upload/Tulips.jpg"/></td>
+		</tr>
+	</table>
+</div>
 </body>
 </html>

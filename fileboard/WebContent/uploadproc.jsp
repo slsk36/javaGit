@@ -10,8 +10,9 @@
 <%
 
 	FileBoardDTO fdto = new FileBoardDTO();
-
+	//int maxsize
 	String filepath = application.getRealPath("/upload/");
+	//String filepath = "d:/upload/";
 
 	File file = new File(filepath);
 	
