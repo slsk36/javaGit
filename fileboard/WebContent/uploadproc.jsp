@@ -40,37 +40,30 @@
 	Enumeration<?> enums = mr.getFileNames();
 	
 	while(enums.hasMoreElements()){
-		String name =(String)enums.nextElement();
-		//서버쪽 이름
+		String name = (String) enums.nextElement();
+		// 서버 쪽 이름
 		String serverfilename = mr.getFilesystemName(name);
-		//클라이언트쪽 이름
-		String clientfilename = mr.getOriginalFileName(name);
+		// 클라이언트쪽 이름
+		String clinetfilename = mr.getOriginalFileName(name);
 		
 		String type = mr.getContentType(name);
 		
 		File cfile = mr.getFile(name);
 		
-		out.println("파라메터 이름: "+name+"<br/>");
-		out.println("서버 이름: "+serverfilename+"<br/>");
-		out.println("클라이언트 이름: "+clientfilename+"<br/>");
-		out.println("파일 크기: "+cfile.length()+"<br/>");
+		out.println("파러메터 이름 : "+name+"<br/>");
+		out.println("서버 이름 : "+serverfilename+"<br/>");
+		out.println("클라이언트 이름 : "+clinetfilename+"<br/>");
+		out.println("파일 크기 : "+cfile.length()+"<br/>");
 		
 		fdto.setFilename(serverfilename);
 		fdto.setTitle(mr.getParameter("title"));
 		fdto.setContent(mr.getParameter("content"));
 	}
 	
-	FileBoardDAO fbd = new FileBoardDAO();
-	fbd.insertFileBoard(fdto);
+	FileBoardDAO fbd = FileBoardDAO.getInstance();
+	out.println("fdto = "+fdto);
+// 	fbd.updateFileBoard(fdto);
+	
+// 	response.sendRedirect("index.jsp"); //순식간에 다음페이지로 갔다가 되돌아옴
+
 %>    
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html> -->

@@ -1,4 +1,4 @@
-<%@page import="com.nh.org.Box"%>
+<%@ page import="com.nh.org.Box"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
