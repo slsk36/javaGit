@@ -1,4 +1,3 @@
-<%@page import="com.mh.org.freeboard.FreeBoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,7 +11,7 @@
 <body>
 <h1>java 모드</h1>
 <%
-	List<String> list = (List)request.getAttribute("list");
+	List<String> list = (List) request.getAttribute("list");
 	for(String temp : list){
 		out.println("temp = "+ temp);
 	}

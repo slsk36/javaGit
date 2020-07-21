@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//import javax.servlet.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+//���� ������ ������� �ҷ��ͼ� ��Ĺ�� �ٽ� ���� �ٿ�޾Ƽ� ��Ҵ�.
+//�˼����� �����ÿ� ��Ĺ�� ������ġ�� Ȯ���� ��
 
 import com.mh.org.freeboard.FreeBoardDAO;
 import com.mh.org.freeboard.FreeBoardDTO;
@@ -25,6 +28,7 @@ public class Controller extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("TEST TEST");
 		String url = request.getRequestURL().toString();
 		url = url.substring(url.lastIndexOf("/"));
 		if(url.equals("/a.ws")) {
@@ -52,59 +56,16 @@ public class Controller extends HttpServlet {
 			rd.forward(request, response);
 		}
 		else if( url.equals("/insertproc.ws") ) {
-//			RequestDispatcher rd= null;
+			RequestDispatcher rd= null;
 			try {
-//				rd = request.getRequestDispatcher("WEB-INF/index.jsp");
-				FreeBoardDTO dto= new FreeBoardDTO(0, request.getParameter("title"), request.getParameter("content"), null, null);
-				dao.insertFreeboard(dto);
-//				List<FreeBoardDTO> list = dao.selectALL();
-//				request.setAttribute("list", list);
+			rd = request.getRequestDispatcher("WEB-INF/index.jsp");
+			FreeBoardDTO dto= new FreeBoardDTO(0, request.getParameter("title"), request.getParameter("content"), null, null);
+			dao.insertOne(dto);
 			}
 			catch(Exception e) {
-//				rd=request.getRequestDispatcher("WEB-INF/error.jsp");
+				rd=request.getRequestDispatcher("WEB-INF/error.jsp");
 			}
-			response.sendRedirect("index.ws");
-			
-//			rd.forward(request, response);
-		}
-		else if( url.equals("/delete.ws") ) {
-			String idx[] = request.getParameterValues("idx");
-			for(int i=0; i< idx.length; i++) {
-				System.out.println("idx= "+idx[i]);
-			}
-			try {
-				dao.deleteAll(idx);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-			response.sendRedirect("index.ws");
-			
-//			List<FreeBoardDTO> list = dao.selectALL();
-//			request.setAttribute("list", list);
-//			
-//			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/index.jsp");
-//			rd.forward(request, response);
-		}
-		else if( url.equals("/update.ws") ) {
-			
-			FreeBoardDTO dto = dao.selectOne(request.getParameter("idx"));
-			request.setAttribute("dto", dto);
-			
-			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/update.jsp");
 			rd.forward(request, response);
-		}
-		else if( url.equals("/updateproc.ws") ) {
-			FreeBoardDTO dto = new FreeBoardDTO(
-					
-								Integer.parseInt(request.getParameter("idx")),
-								request.getParameter("title"),
-								request.getParameter("content"),
-								null,
-								null);
-			
-			dao.updateFreeBoard( dto );
-			
-			response.sendRedirect("index.ws");
 		}
 	}
 
