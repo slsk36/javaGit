@@ -59,8 +59,19 @@ $(document).ready(function(){
 			</table>
 			</form>
 		</div>
+		
+		<div class="row" style="text-align:center">
+			<c:forEach begin="1" end="${pagecount}" var="i">
+				<a href="index.ws?page=${i}">[ ${i} ]</a>
+			</c:forEach>
+<!-- 			<a href="index.ws?page=2">[2]</a> -->
+<!-- 			<a href="index.ws?page=3">[3]</a> -->
+		</div>
+		
+		<div class="row">
 		<button id="insert" type="button" class="btn btn-success">글쓰기</button>
 		<button id="delete" type="button" class="btn btn-success">삭제</button>
+		</div>
 	</div>
 </body>
 </html>
