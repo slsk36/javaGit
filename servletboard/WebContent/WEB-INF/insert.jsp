@@ -8,7 +8,9 @@
 <%@ include file="../resources/cssjs/Head.jsp" %>
 <script type="text/javascript">
 $(document).ready(function(){
-	
+	$("#index").on("click",function(){
+		window.location="index.ws";
+	});
 });
 </script>
 </head>
@@ -31,14 +33,14 @@ $(document).ready(function(){
 			<tr>
 				<td colspan="2" style="text-align:center;">
 				<input type="submit" class="btn btn-success" value="저장"/>
-				<input type="reset" class="btn btn-success" value="취소"/>
+				<input id="index" type="reset" class="btn btn-success" value="취소"/>
 				</td>
 			</tr>
 		</table>
 		</form>
 		</div>
 		<div class="row">
-		<button id="insert" type="button" class="btn btn-success">글목록</button>
+		<button id="index" type="button" class="btn btn-success">글목록</button>
 		</div>
 	</div>
 </body>
